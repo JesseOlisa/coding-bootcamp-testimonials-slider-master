@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+/*RESETS*/
+
+/*general*/
+
+/*box-sizing*/
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+ {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+/*makes image easier to work with*/
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+
+/*UTILITY CLASS*/
+.flex {
+    display: flex;
+    flex-direction: column-reverse;
+}
+body {
+    min-width: 100%;
+    line-height: 1.5rem;
+    color: hsl(240, 38%, 20%);
+    background: url(./images/pattern-curve.svg) no-repeat left bottom / 80%;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ========
+MAIN STYLING
+==========*/
+.main-container {
+    min-height: 100vh;
+    width: 85%;
+    max-width: 75rem;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    display: flex;
+    place-items: center;
+}
+.review-container {
+    min-width: 100%;
+}
+.review-info {
+    position: relative;
+    background: url(./images/pattern-quotes.svg) no-repeat center top / 20%;
+    padding-top: 1.6rem;
+    text-align: center;
+}
+.review-info > p {
+    font-size: 1.28rem;
+    font-weight: 400;
+}
+.reviewer-desc {
+    margin-top: 1rem;
+    line-height: 1.2;
+}
+.reviewer-desc h1, .reviewer-desc p {
+    font-size: 1.1rem;
+}
+.role {
+    color: hsl(240, 18%, 77%);
+    font-weight: 300;
+}
+
+/* ========
+IMAGES
+=======*/
+.review-image-container {
+    padding: 3rem .5rem;
+    position: relative;
+    background-image: url(./images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+.profile-img {
+    width: 82%;
+    border-radius: .8rem;
+    margin-inline: auto;
+    box-shadow: -85px 120px 50px -90px hsla(240, 38%, 20%, .4);
+}
+
+/* ========
+SLIDER BUTTONS
+===========*/
+.slider-container {
+    position: absolute;
+    bottom: 8%;
+    left: 25%;
+    width: 4.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 2.5rem;
+    padding: 1rem .5rem;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 3px 3px 20px 3px hsla(240, 38%, 20%, .3);
+}
+.slider-container img {
+    padding-inline: .5rem;
+    width: 1.5rem;
+    height: .8rem;
+    cursor: pointer;
+    
+}
+
+@media screen and (min-width: 45rem) {
+   .main-container {
+        width: 70%;
+   } 
+   .review-info > p {
+        font-size: 1.55rem;
+    }
+    .slider-container {
+        width: 5.5rem;
+        padding: 1.2rem .5rem;
+    }
+    .slider-container img {
+        width: 2rem;
+        height: 1rem;
+        padding-inline: .6rem;
+    }
+}
+@media screen and (min-width: 59.3759rem) {
+    body {
+        background-size: 50%;
+    }
+
+    .main-container {
+        width: 85%;
+    }
+    .flex {
+        flex-direction: row;
+    }
+    .review-info {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-position: left 10% top 30%;
+        background-size: 15%;
+        left: 10%;
+        z-index: 10;
+    }
+    .review-info > p {
+        font-size: 2.1rem;
+        line-height: 1.2;
+    }
+    .review-image-container {
+        padding: 4rem;
+    }
+    .reviewer-desc {
+        display: flex;
+    }
+    .reviewer-desc h1, .reviewer-desc p {
+        font-size: 1.25rem;
+        margin-right: .8rem;
+    }
+    .profile-img {
+        min-width: 28rem;
+    }
+}
